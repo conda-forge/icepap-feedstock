@@ -14,8 +14,7 @@ build:
   number: 0
   noarch: python
   entry_points:
-    - icepap = icepap.__main__:main
-    - icepapctl = icepap.cli:cli
+    - icepapctl = icepap.cli.cli:cli
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
@@ -36,7 +35,6 @@ test:
     - icepap
   commands:
     - pip check
-    - icepap --help
     - icepapctl --help
 
 about:
