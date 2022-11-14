@@ -153,4 +153,5 @@ Feedstock Maintainers
 =====================
 
 * [@beenje](https://github.com/beenje/)
+* [@rhomspuron](https://github.com/rhomspuron/)
 
