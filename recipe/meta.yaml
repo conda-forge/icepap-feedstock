@@ -1,5 +1,5 @@
 {% set name = "icepap" %}
-{% set version = "3.7.2" %}
+{% set version = "3.7.3" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/icepap-{{ version }}.tar.gz
-  sha256: 8a2ab91f17c9d72c47cce8684e52528c9cab22234f8ab02a242de9803230ce8e
+  sha256: f2192e6d813c3203246a016bc69681e6960c25782719dd1ade33ffdc27da706c
 
 build:
   number: 0
