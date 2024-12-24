@@ -7,11 +7,11 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/icepap-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/icepap-{{ version }}.tar.gz
   sha256: 066e93f0c18a185db896e28f5cea6457b15aa0373c0d4e7015fbb206c8f5d6c6
 
 build:
-  number: 0
+  number: 1
   noarch: python
   entry_points:
     - icepapctl = icepap.cli.cli:cli
@@ -20,17 +20,18 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.6
+    - python {{ python_min }}
   run:
     - beautifultable >=1
     - click >=7
     - numpy
     - prompt_toolkit >=3
-    - python >=3.6
+    - python >={{ python_min }}
 
 test:
   requires:
     - pip
+    - python {{ python_min }}
   imports:
     - icepap
   commands:
