@@ -21,6 +21,7 @@ requirements:
   host:
     - pip
     - python {{ python_min }}
+    - setuptools
   run:
     - beautifultable >=1
     - click >=7
