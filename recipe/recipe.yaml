@@ -36,14 +36,13 @@ tests:
   - python:
       imports:
         - icepap
-      python_version: ${{ python_min }}.*
-  - requirements:
-      run:
-        - pip
-        - python ${{ python_min }}.*
-    script:
-      - pip check
+      python_version: ["${{ python_min }}.*", "3.*"]
+      pip_check: true
+  - script:
       - icepapctl --help
+    requirements:
+      run:
+        - python ${{ python_min }}.*
 
 about:
   license: GPL-3.0-or-later
@@ -53,8 +52,8 @@ about:
     Python module to configure, control and monitor IcePAP based systems.
     IcePAP is a motor control system developed at the ESRF and optimised
     for high resolution position applications.
-  homepage: https://github.com/ALBA-Synchrotron/pyIcePAP
-  repository: https://github.com/ALBA-Synchrotron/pyIcePAP
+  homepage: https://gitlab.com/icepap-organization/IcePAP
+  repository: https://gitlab.com/icepap-organization/IcePAP
   documentation: https://alba-synchrotron.github.io/pyIcePAP-doc/
 
 extra:
