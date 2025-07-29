@@ -3,20 +3,19 @@ About icepap-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/icepap-feedstock/blob/main/LICENSE.txt)
 
-Home: https://github.com/ALBA-Synchrotron/pyIcePAP
+Home: https://gitlab.com/icepap-organization/IcePAP
 
 Package license: GPL-3.0-or-later
 
 Summary: Python IcePAP Extension
 
-Development: https://github.com/ALBA-Synchrotron/pyIcePAP
+Development: https://gitlab.com/icepap-organization/IcePAP
 
 Documentation: https://alba-synchrotron.github.io/pyIcePAP-doc/
 
 Python module to configure, control and monitor IcePAP based systems.
 IcePAP is a motor control system developed at the ESRF and optimised
 for high resolution position applications.
-
 
 Current build status
 ====================
