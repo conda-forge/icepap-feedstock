@@ -17,7 +17,6 @@ Python module to configure, control and monitor IcePAP based systems.
 IcePAP is a motor control system developed at the ESRF and optimised
 for high resolution position applications.
 
-
 Current build status
 ====================
 
