@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: icepap
-  version: 3.12.0
+  version: "3.14.0"
 
 package:
   name: ${{ name|lower }}
@@ -10,10 +10,10 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/icepap-${{ version }}.tar.gz
-  sha256: 552e11ee9433a28ad114b6d6e23c75a635eb2f0d36ba40ca0f394c78aaeac024
+  sha256: 014ba5392f44b7ac1e097eb6537d4444843a95ac15d284ebd79042f2c9a5e9ce
 
 build:
-  number: 1
+  number: 0
   noarch: python
   script: ${{ PYTHON }} -m pip install . -vv
   python:
@@ -25,6 +25,7 @@ requirements:
     - pip
     - python ${{ python_min }}.*
     - setuptools
+    - setuptools-scm
   run:
     - beautifultable >=1
     - click >=7
@@ -36,7 +37,9 @@ tests:
   - python:
       imports:
         - icepap
-      python_version: ["${{ python_min }}.*", "3.*"]
+      python_version:
+        - ${{ python_min }}.*
+        - 3.*
       pip_check: true
   - script:
       - icepapctl --help
